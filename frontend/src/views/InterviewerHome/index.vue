@@ -9,7 +9,7 @@
         <el-icon><document-add /></el-icon>
         Create Questionnaire
       </el-menu-item>
-      <el-menu-item index="/" disabled>
+      <el-menu-item index="/interviewer/view_questionnaire" >
         <el-icon><document-checked /></el-icon>
         Import Questionnaire
       </el-menu-item>

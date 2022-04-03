@@ -24,6 +24,11 @@ const routes = [
         path: 'create_questionnaire',
         name: 'CreateQuestionnaire',
         component: () => import('~/views/InterviewerHome/CreateQuestionnaire/index.vue')
+      },
+      {
+        path: 'view_questionnaire',
+        name: 'view_questionnaire',
+        component: () => import('~/views/InterviewerHome/ViewQuestionnaire/index.vue')
       }
     ]
   }

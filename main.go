@@ -15,13 +15,12 @@ import (
 //go:embed frontend/src
 var assets embed.FS
 
-//go:embed build/appicon.png
+//go:embed appIcon.png
 var icon []byte
 
 func main() {
 	// Create an instance of the app structure
 	app := NewApp()
-
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:             "interview",
@@ -36,10 +35,10 @@ func main() {
 		Frameless:         false,
 		StartHidden:       false,
 		HideWindowOnClose: false,
-		RGBA:              &options.RGBA{R: 255, G: 255, B: 255, A: 255},
+		RGBA:              &options.RGBA{R: 145, G: 145, B: 233, A: 100},
 		Assets:            assets,
 		Menu:              nil,
-		Logger:            nil,
+		Logger:            logger.NewDefaultLogger(),
 		LogLevel:          logger.DEBUG,
 		OnStartup:         app.startup,
 		OnDomReady:        app.domReady,
@@ -52,7 +51,7 @@ func main() {
 		// Windows platform specific options
 		Windows: &windows.Options{
 			WebviewIsTransparent: false,
-			WindowIsTranslucent:  false,
+			WindowIsTranslucent:  true,
 			DisableWindowIcon:    false,
 			// DisableFramelessWindowDecorations: false,
 			WebviewUserDataPath: "",
@@ -67,11 +66,11 @@ func main() {
 				HideToolbarSeparator:       true,
 			},
 			Appearance:           mac.NSAppearanceNameDarkAqua,
-			WebviewIsTransparent: true,
+			WebviewIsTransparent: false,
 			WindowIsTranslucent:  true,
 			About: &mac.AboutInfo{
-				Title:   "Vanilla Template",
-				Message: "Part of the Wails projects",
+				Title:   "Interview",
+				Message: "Copyright © 2022 Renting Liu and DAOZHUODA. All rights reserved.",
 				Icon:    icon,
 			},
 		},

@@ -1,11 +1,28 @@
 # README
 
-## About
+Interview offline with distance interviewee
 
-This template uses vanilla JS / HTML and CSS.
+### Feature
+- Create Questionnaire
+- Import&Export Questionnaire
+- Edit Questionnaire
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+### Get Started
+
+#### Install Wails
+`go install github.com/wailsapp/wails/v2/cmd/wails@latest`
+
+#### Install go modules
+`go mod tidy`
+
+#### Install Node Packages
+`cd frontend`
+
+`npm install`
+
+#### Build Frontend
+
+`vite build"`
 
 ## Live Development
 
@@ -16,3 +33,7 @@ on http://localhost:34115. Open this in your browser to connect to your applicat
 
 For a production build, use `wails build`.
 
+## About
+
+You can configure the project by editing `wails.json`. More information about the project settings can be found
+here: https://wails.io/docs/reference/project-config

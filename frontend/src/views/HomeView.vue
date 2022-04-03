@@ -1,27 +1,39 @@
 <template>
   <div class="app-container">
     <div class="top">
-      <h3>
+      <h1>
         Please Choose Your Identity
-      </h3>
+      </h1>
     </div>
     <div class="body">
       <div class="btn-box">
-        <div @click="goInterviewer">
+        <div>
           <el-card class="box-card" shadow="hover">
             <template #header>
               <div class="card-header">
-                <h4>I'm Interviewer <el-icon :size="20"><user-filled /></el-icon></h4>
+                <h4>I'm Interviewer
+                  <el-icon :size="20">
+                    <user-filled/>
+                  </el-icon>
+                </h4>
               </div>
             </template>
             <div>
               <div class="id-desc-info">
-                <el-icon><document-add /></el-icon>
-                Create questionnaire
+                <el-link :underline="false" @click="$router.push('/interviewer/create_questionnaire')">
+                  <el-icon>
+                    <document-add/>
+                  </el-icon>
+                  Create questionnaire
+                </el-link>
               </div>
               <div class="id-desc-info">
-                <el-icon><document-checked /></el-icon>
-                Open completed questionnaire
+                <el-link :underline="false" @click="$router.push('/interviewer/view_questionnaire')">
+                  <el-icon>
+                    <document-checked/>
+                  </el-icon>
+                  Open completed questionnaire
+                </el-link>
               </div>
               <div class="id-desc-info">...</div>
             </div>
@@ -31,13 +43,21 @@
           <el-card class="box-card" shadow="hover">
             <template #header>
               <div class="card-header">
-                <h4>I'm Interviewee <el-icon :size="20"><user /></el-icon></h4>
+                <h4>I'm Interviewee
+                  <el-icon :size="20">
+                    <user/>
+                  </el-icon>
+                </h4>
               </div>
             </template>
             <div>
               <div class="id-desc-info">
-                <el-icon><mic /></el-icon>
-                Fill out questionnaire
+                <el-link :underline="false">
+                  <el-icon>
+                    <mic/>
+                  </el-icon>
+                  Fill out questionnaire
+                </el-link>
               </div>
               <div class="id-desc-info">...</div>
             </div>
@@ -46,7 +66,7 @@
       </div>
     </div>
     <div class="footer">
-      Copyright © 2022 Renting Liu and Zhuoda Zhao. All rights reserved.
+      Copyright © 2022 Renting Liu and DAOZHUODA. All rights reserved.
     </div>
   </div>
 </template>
@@ -57,10 +77,7 @@ export default {
   name: 'HomeView',
   components: {},
   methods: {
-    goInterviewer () {
-      this.$router.push('/interviewer')
-    },
-    goInterviewee () {
+    goInterviewee() {
       this.$router.push('/')
     }
   }
@@ -97,7 +114,7 @@ export default {
   height: 525px;
   width: 380px;
   border-radius: 5px;
-  cursor: pointer;
+  //cursor: pointer;
 }
 
 .footer {

@@ -21,8 +21,8 @@ build/
 # frontend local file
 frontend/dist/
 
+frontend/.idea/
 frontend/.DS_Store/
 frontend/src/.DS_Store/
-frontend/src/views/.DS_Store
-
+frontend/src/views/.DS_Store/
 frontend/node_modules/

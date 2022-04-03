@@ -12,6 +12,21 @@ const go = {
       "Greet": (arg1) => {
         return window.go.main.App.Greet(arg1);
       },
+      /**
+       * OpenQuestionnaire
+       * @returns {Promise<Array<models.question>|Error>}  - Go Type: []*main.question
+       */
+      "OpenQuestionnaire": () => {
+        return window.go.main.App.OpenQuestionnaire();
+      },
+      /**
+       * Save
+       * @param {Array<models.question>} arg1 - Go Type: []main.question
+       * @returns {Promise<string|Error>}  - Go Type: string
+       */
+      "Save": (arg1) => {
+        return window.go.main.App.Save(arg1);
+      },
     },
   },
 
