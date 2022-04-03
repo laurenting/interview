@@ -1,4 +1,4 @@
-module changeme
+module interview
 
 go 1.17
 

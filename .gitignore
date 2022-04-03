@@ -17,3 +17,12 @@ build/
 .idea/
 
 .DS_Store/
+
+# frontend local file
+frontend/dist/
+
+frontend/.DS_Store/
+frontend/src/.DS_Store/
+frontend/src/views/.DS_Store
+
+frontend/node_modules/

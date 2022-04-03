@@ -1,32 +1,24 @@
-// Get input + focus
-let nameElement = document.getElementById("name");
-nameElement.focus();
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
 
-// Setup the greet function
-window.greet = function () {
-  // Get name
-  let name = nameElement.value;
+import ElementPlus from 'element-plus'
+import * as ElIcons from '@element-plus/icons-vue'
+import '~/styles/index.scss'
 
-  // Check if the input is empty
-  if (name === "") return;
+const app = createApp(App)
+app
+  .use(router)
+  .use(ElementPlus, {
+    size: 'mini',
+    zIndex: 3000
+  })
+  .mount('#app')
 
-  // Call App.Greet(name)
-  try {
-    window.go.main.App.Greet(name)
-      .then((result) => {
-        // Update result with data back from App.Greet()
-        document.getElementById("result").innerText = result;
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  } catch (err) {
-    console.error(err);
+// 统一注册Icon图标
+for (const iconName in ElIcons) {
+  if (Reflect.has(ElIcons, iconName)) {
+    const item = ElIcons[iconName]
+    app.component(iconName, item)
   }
-};
-
-nameElement.onkeydown = function (e) {
-  if (e.keyCode == 13) {
-    window.greet();
-  }
-};
+}

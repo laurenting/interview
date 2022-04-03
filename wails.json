@@ -1,9 +1,21 @@
 {
   "name": "interview",
-  "outputfilename": "interview",
-  "wailsjsdir": "./frontend",
+  "version": "0.1.0",
   "author": {
     "name": "laurenting",
     "email": "jent.k.lau@gmail.com"
+  },
+  "outputfilename": "interview",
+  "wailsjsdir": "./frontend/src",
+  "assetdir": "./frontend/dist",
+  "debounceMS": 500,
+  "runNonNativeBuildHooks": false,
+  "devserverurl": "http://localhost:34115",
+  "info": {
+    "companyName": "interview",
+    "productName": "interview",
+    "productVersion": "0.1.0",
+    "copyright": "Copyright © 2022 Renting Liu and Zhuoda Zhao. All rights reserved.",
+    "comments": "Interview offline with distance interviewee. Built using Wails (https://wails.app)"
   }
 }
