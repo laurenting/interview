@@ -1,15 +1,17 @@
 <template>
-  <div style="width: 100%;text-align: center">
-    <el-button style="width:200px;margin-top: 20px" @click="handleOpenQuestionnaire">
-      <el-icon>
-        <search/>
-      </el-icon>
-      Select File
-    </el-button>
-    <Questionnaire
-        :question-list="questionList"
-        :editable="false"
-    ></Questionnaire>
+  <div class="app-container">
+    <div style="height: 635px; text-align: center;padding: 20px 0; overflow: auto">
+      <el-button style="width:200px;margin-top: 20px" @click="handleOpenQuestionnaire">
+        <el-icon>
+          <search/>
+        </el-icon>
+        Select File
+      </el-button>
+      <Questionnaire
+          :question-list="questionList"
+          :editable="false"
+      ></Questionnaire>
+    </div>
   </div>
 </template>
 

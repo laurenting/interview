@@ -8,6 +8,8 @@
   "outputfilename": "interview",
   "wailsjsdir": "./frontend/src",
   "assetdir": "./frontend/dist",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
   "debounceMS": 500,
   "runNonNativeBuildHooks": false,
   "devserverurl": "http://localhost:34115",
