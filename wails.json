@@ -1,0 +1,9 @@
+{
+  "name": "interview",
+  "outputfilename": "interview",
+  "wailsjsdir": "./frontend",
+  "author": {
+    "name": "laurenting",
+    "email": "jent.k.lau@gmail.com"
+  }
+}
