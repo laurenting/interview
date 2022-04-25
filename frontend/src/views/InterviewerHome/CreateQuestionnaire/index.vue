@@ -69,7 +69,9 @@ export default {
         this.$refs['createQuestionnaireForm'].validate((isValid) => {
           if (!isValid) return
           window.go.main.App.Save(this.dynamicValidateForm.question).then((resp) => {
-            this.$message.success(resp)
+            if (resp) {
+              this.$message.success(resp)
+            }
           })
         })
       } catch (e) {
